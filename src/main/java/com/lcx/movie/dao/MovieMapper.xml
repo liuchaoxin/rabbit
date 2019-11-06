@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lcx.movie.dao.MovieMapper">
+	<resultMap type="com.lcx.movie.damain.Movie" id="mov">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="author" property="author"/>
+		<result column="price" property="price"/>
+		<result column="dtime" property="dtime"/>
+		<result column="mlong" property="mlong"/>
+		<result column="type" property="type"/>
+		<result column="year" property="year"/>
+		<result column="country" property="country"/>
+		<result column="tai" property="tai"/>
+		
+		
+	</resultMap>
+
+	<select id="getlist" resultMap="mov">
+		select * from movie
+	</select>
+	
+</mapper>
